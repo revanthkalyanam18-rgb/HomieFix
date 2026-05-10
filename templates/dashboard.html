@@ -10,7 +10,11 @@
 
         <ul>
 
-            <li>Dashboard</li>
+            <li>
+                <a href="/dashboard">
+                    Dashboard
+                </a>
+            </li>
 
             <li>
                 <a href="/services">
@@ -18,9 +22,23 @@
                 </a>
             </li>
 
-            <li>Bookings</li>
+            <li>
+                <a href="/my-bookings">
+                    My Bookings
+                </a>
+            </li>
 
-            <li>Payments</li>
+            <li>
+                <a href="/payments">
+                    Payments
+                </a>
+            </li>
+
+            <li>
+                <a href="/logout">
+                    Logout
+                </a>
+            </li>
 
         </ul>
 
@@ -31,10 +49,23 @@
         <div class="hero-card">
 
             <h1>Welcome to HomieFix</h1>
+            <div style="margin-top:30px;">
+
+    <button>
+        Explore Services
+    </button>
+
+</div>
 
             <p>
-                AI Powered Domestic Service Platform
-            </p>
+    Smart AI-Powered Home Services at Your Doorstep
+</p>
+
+<h3 style="margin-top:20px; opacity:0.7;">
+
+    Fast • Trusted • Verified Professionals • Real-Time Support
+
+</h3>
 
         </div>
 
@@ -42,7 +73,7 @@
 
             <div class="stat-card">
 
-                <h2>12</h2>
+                <h2>{{ total_bookings }}</h2>
 
                 <p>Total Bookings</p>
 
@@ -50,7 +81,7 @@
 
             <div class="stat-card">
 
-                <h2>8</h2>
+                <h2>{{ completed }}</h2>
 
                 <p>Completed Services</p>
 
@@ -58,7 +89,7 @@
 
             <div class="stat-card">
 
-                <h2>4</h2>
+                <h2>{{ pending }}</h2>
 
                 <p>Pending Services</p>
 

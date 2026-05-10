@@ -114,7 +114,26 @@ def login():
 @login_required
 def dashboard():
 
-    return render_template('dashboard.html')
+    total_bookings = Booking.query.filter_by(
+        user_id=current_user.id
+    ).count()
+
+    completed = Booking.query.filter_by(
+        user_id=current_user.id,
+        status='Completed'
+    ).count()
+
+    pending = Booking.query.filter_by(
+        user_id=current_user.id,
+        status='Pending'
+    ).count()
+
+    return render_template(
+        'dashboard.html',
+        total_bookings=total_bookings,
+        completed=completed,
+        pending=pending
+    )
 
 
 @app.route('/services')

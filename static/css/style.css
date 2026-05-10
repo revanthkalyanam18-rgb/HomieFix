@@ -48,6 +48,11 @@ body{
     transition:0.4s;
     font-size:18px;
 }
+.sidebar a{
+    color:white;
+    text-decoration:none;
+    display:block;
+}
 
 .sidebar ul li:hover{
     background:linear-gradient(45deg,#00c6ff,#0072ff);
